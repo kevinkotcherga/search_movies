@@ -7,9 +7,14 @@ export default class extends Controller {
         .then(response => response.json())
         .then((data) => {
           data.Search.forEach((result) => {
-            const movie = `<li class="list-inline-item">
-              <img src="${result.Poster}" alt="">
-              <p>${result.Title}</p>
+            const movie =
+            `<li class="list-inline-item">
+                <div class="card" style="width: 18rem; height: 500px; padding: 10px; margin: 10px;">
+                <img src="${result.Poster}"style="height: 400px;" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text">${result.Title}</p>
+                  </div>
+                </div>
             </li>`;
             results.insertAdjacentHTML("beforeend", movie);
           });
