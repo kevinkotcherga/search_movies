@@ -15,6 +15,7 @@ export default class extends Controller {
           });
         });
     };
+
     const form = document.querySelector('#search-form');
 
     form.addEventListener('submit', (event) => {
