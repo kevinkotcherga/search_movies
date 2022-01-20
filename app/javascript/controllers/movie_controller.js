@@ -3,7 +3,7 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   connect() {
     const searchMovies = (query) => {
-      fetch(`http://www.omdbapi.com/?s=${query}&apikey=b8c7e6de`)
+      fetch(`http://www.omdbapi.com/?s=${query}&apikey=48727053`)
         .then(response => response.json())
         .then((data) => {
           data.Search.forEach((result) => {
